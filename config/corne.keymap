@@ -88,7 +88,7 @@
         };
     };
 
-    // CONFIGURACIÓN COMPLETA DE DISPLAYS OLED
+    // CONFIGURACIÓN DE DISPLAYS OLED
     displays {
         compatible = "zmk,display";
 
