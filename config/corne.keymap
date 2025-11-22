@@ -25,8 +25,6 @@
                 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
                           &kp LGUI &mo 1 &kp SPACE             &kp RET &mo 2 &mo 3
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -124,15 +122,6 @@
             com-invdir;
             com-sequential;
             prechargep = <0x22>;
-        };
-    };
-
-    // Configuración de LEDs (si tu Corne tiene)
-    leds {
-        compatible = "gpio-leds";
-        led_0: led_0 {
-            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-            label = "Blue LED";
         };
     };
 };
