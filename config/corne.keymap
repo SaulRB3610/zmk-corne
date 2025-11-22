@@ -87,41 +87,4 @@
             >;
         };
     };
-
-    // CONFIGURACIÓN DE DISPLAYS OLED
-    displays {
-        compatible = "zmk,display";
-
-        s0: ssd1306@0 {
-            compatible = "solomon,ssd1306fb";
-            reg = <0>;
-            label = "SSD1306_0";
-            width = <128>;
-            height = <32>;
-            segment-offset = <0>;
-            page-offset = <0>;
-            display-offset = <0>;
-            multiplex-ratio = <31>;
-            segment-remap;
-            com-invdir;
-            com-sequential;
-            prechargep = <0x22>;
-        };
-
-        s1: ssd1306@1 {
-            compatible = "solomon,ssd1306fb";
-            reg = <1>;
-            label = "SSD1306_1";
-            width = <128>;
-            height = <32>;
-            segment-offset = <0>;
-            page-offset = <0>;
-            display-offset = <0>;
-            multiplex-ratio = <31>;
-            segment-remap;
-            com-invdir;
-            com-sequential;
-            prechargep = <0x22>;
-        };
-    };
 };
