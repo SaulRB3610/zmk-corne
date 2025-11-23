@@ -37,7 +37,7 @@
    &kp F1       &kp F2       &KP F3       &kp F4       &kp F5        &kp F6            &kp N7  &kp N8 &kp N9  &kp ASTRK  &kp FSLH  &kp EQUAL
    &kp F7       &kp F8       &KP F9       &kp F10      &kp F11       &kp F12           &kp N4  &kp N5 &kp N6  &kp MINUS  &kp PRCNT &kp DLLR
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &bt BT_CLR        &kp N1  &kp N2 &KP N3  &kp PLUS   &kp LT    &kp GT
-                                                       &trans        &trans &trans     &kp RET &KP N0 &kp DOT
+                                                       &trans        &trans &trans     &kp RET &kp N0 &kp DOT
                         >;
                 };
 
