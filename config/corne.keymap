@@ -10,14 +10,6 @@
 
 / {
     behaviors {
-        caps_hold: caps_on_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_ON_HOLD";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <2000>;
-            bindings = <&kp>, <&kp>;
-        };
         my_ht: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -33,9 +25,9 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-    &my_ht ESC TAB    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+    &my_ht TAB ESC    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I &kp O &kp P &kp BSPC
     &kp LSHFT         &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K &kp L &kp UP &kp LGUI
-    &kp LCTRL         &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &caps_hold CAPS RESERVED &kp LEFT &kp DOWN &kp RIGHT
+    &kp LCTRL         &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp CAPS &kp LEFT &kp DOWN &kp RIGHT
                         &kp LALT &mo 1 &kp SPACE        &kp SPACE &mo 2 &kp RET
             >;
         };
