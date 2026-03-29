@@ -9,16 +9,24 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-            behaviors {
-        caps_hold: caps_on_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_ON_HOLD";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <2000>;
-            bindings = <&kp>, <&kp>;
+        behaviors {
+                caps_hold: caps_on_hold {
+                compatible = "zmk,behavior-hold-tap";
+                label = "CAPS_ON_HOLD";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <2000>;
+                bindings = <&kp>, <&none>;
+                };
+
+                my_ht: my_hold_tap {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <2000>;
+                bindings = <&kp>, <&kp>;
+                };
         };
-    };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -31,14 +39,14 @@
 // | CTRL    |  Z  |  X  |  C  |  V   |  B  | | |  N  |  M   | MAYU | LFT | DWN | RGT  |
 //                       | ALT | LNUM | SPC | | | SPC | RSIM | ENT  |
                         bindings = <
-   &kp caps_hold TAB ESC &kp Q &kp W &kp E    &kp R &kp T     &kp Y     &kp U &kp I                   &kp O    &kp P    &kp BSPC
-   &kp LSHFT             &kp A &kp S &kp D    &kp F &kp G     &kp H     &kp J &kp K                   &kp L    &kp UP   &kp LGUI
-   &kp LCTRL             &kp Z &kp X &kp C    &kp V &kp B     &kp N     &kp M &kp caps_hold CAPS NONE &kp LEFT &kp DOWN &kp RIGHT  
-                                     &kp LALT &mo 1 &kp SPACE &kp SPACE &mo 2 &kp RET
+   &my_ht TAB ESC &kp Q &kp W &kp E    &kp R &kp T      &kp Y     &kp U &kp I           &kp O    &kp P    &kp BSPC
+   &kp LSHFT      &kp A &kp S &kp D    &kp F &kp G      &kp H     &kp J &kp K           &kp L    &kp UP   &kp LGUI
+   &kp LCTRL      &kp Z &kp X &kp C    &kp V &kp B      &kp N     &kp M &caps_hold CAPS &kp LEFT &kp DOWN &kp RIGHT  
+                              &kp LALT &mo 1 &kp SPACE  &kp SPACE &mo 2 &kp RET
                         >;
                 };
                 lower_layer {
-                        display-name = "F | B | NUM ";
+                        display-name = "F | B | NUM";
 // -----------------------------------------------------------------------------------------
 // | F1  | F2  | F3  | F4  | F5  | F6    | | |  7  |  8  |  9  |  *  |  /  |  =  |
 // | F7  | F8  | F9  | F10 | F11 | F12   | | |  4  |  5  |  6  |  -  |  %  |  $  |
