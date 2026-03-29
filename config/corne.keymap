@@ -13,7 +13,7 @@
                 caps_hold: caps_on_hold {
                 compatible = "zmk,behavior-hold-tap";
                 label = "CAPS_ON_HOLD";
-                #binding-cells = <2>;
+                #binding-cells = <1>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <2000>;
                 bindings = <&kp>, <&none>;
